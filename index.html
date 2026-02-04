@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BordArt - Bordados Computadorizados em Aracaju. Qualidade e confianca em bordados personalizados, uniformes empresariais e brindes corporativos.">
+    <meta name="keywords" content="bordados, bordados computadorizados, uniformes, brindes, Aracaju, Sergipe">
+    <title>BordArt - Bordados Computadorizados | Qualidade e Confianca</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="assets/logo.png" alt="BordArt Logo" height="50" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos">Servicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfólio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <img src="assets/logo.png" alt="BordArt - Bordados Computadorizados" class="hero-logo mb-4">
+                    <p class="hero-subtitle mb-5">Qualidade e confiança em cada ponto.<br>Bordados computadorizados com precisão e acabamento impecável.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5579988196571" class="btn btn-whatsapp btn-lg me-3" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i>Fale Conosco
+                        </a>
+                        <a href="#servicos" class="btn btn-outline-light btn-lg">
+                            Nossos Serviços
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-pattern"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nossos Servicos</h2>
+                <p class="section-subtitle">Solucoes completas em bordados para sua empresa</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-brush"></i>
+                        </div>
+                        <h4>Bordados Personalizados</h4>
+                        <p>Criamos bordados unicos de acordo com sua arte e especificacoes. Qualidade e fidelidade garantidas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <h4>Uniformes Empresariais</h4>
+                        <p>Bordamos sua marca em camisas, polos, jalecos e mais. Profissionalize a imagem da sua equipe.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-gift"></i>
+                        </div>
+                        <h4>Brindes Corporativos</h4>
+                        <p>Bones, toalhas, necessaires e muito mais. Personalize seus brindes com bordados de alta qualidade.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h4>Logos e Marcas</h4>
+                        <p>Transformamos sua logo em bordado com precisao. Mantenha a identidade visual da sua empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Instagram Carousel Section -->
+    <section id="portfolio" class="portfolio-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">Nossos Trabalhos</h2>
+                <p class="section-subtitle text-white-50">Confira alguns dos nossos bordados</p>
+            </div>
+
+            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #2B7CB3, #3AAFA9);">
+                                        <i class="bi bi-image"></i>
+                                        <span>Uniforme Corporativo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #3AAFA9, #4ECDC4);">
+                                        <i class="bi bi-image"></i>
+                                        <span>Logo Bordada</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #2B7CB3, #1a5276);">
+                                        <i class="bi bi-image"></i>
+                                        <span>Bone Personalizado</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #4ECDC4, #3AAFA9);">
+                                        <i class="bi bi-image"></i>
+                                        <span>Jaleco Medico</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #1a5276, #2B7CB3);">
+                                        <i class="bi bi-image"></i>
+                                        <span>Camisa Polo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #3AAFA9, #2B7CB3);">
+                                        <i class="bi bi-image"></i>
+                                        <span>Toalha Bordada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #2B7CB3, #4ECDC4);">
+                                        <i class="bi bi-image"></i>
+                                        <span>Mochila Corporativa</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #3AAFA9, #1a5276);">
+                                        <i class="bi bi-image"></i>
+                                        <span>Avental Bordado</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #4ECDC4, #2B7CB3);">
+                                        <i class="bi bi-image"></i>
+                                        <span>Necessaire</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Proximo</span>
+                </button>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="https://instagram.com/bordartaracaju/" class="btn btn-instagram btn-lg" target="_blank">
+                    <i class="bi bi-instagram me-2"></i>Siga-nos no Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Values Section -->
+    <section id="sobre" class="about-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Por que BordArt?</h2>
+                <p class="section-subtitle">Compromisso com a excelencia em cada detalhe</p>
+            </div>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="value-card qualidade">
+                        <div class="value-icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <h3>Qualidade</h3>
+                        <p>Utilizamos equipamentos de ultima geracao e linhas premium para garantir bordados com acabamento perfeito e durabilidade excepcional.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="value-card confianca">
+                        <div class="value-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3>Confianca</h3>
+                        <p>Cumprimos prazos e entregamos exatamente o que prometemos. Sua satisfacao e nossa prioridade numero um.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Anos de Experiencia</span>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Clientes Atendidos</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-item">
+                        <span class="stat-number">50k+</span>
+                        <span class="stat-label">Pecas Bordadas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">Entre em Contato</h2>
+                <p class="section-subtitle text-white-50">Estamos prontos para atender voce</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h5>WhatsApp</h5>
+                                <a href="https://wa.me/5579988196571" target="_blank">(79) 98819-6571</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div>
+                                <h5>Telefone</h5>
+                                <a href="tel:+557932229505">(79) 3222-9505</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>E-mail</h5>
+                                <a href="mailto:bordartaju@gmail.com">bordartaju@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Endereco</h5>
+                                <p class="mb-0">Aracaju - SE<br>Brasil</p>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5579988196571" class="btn btn-whatsapp btn-lg w-100 mt-4" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i>Iniciar Conversa
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="phone" class="form-label">Telefone</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="bi bi-send me-2"></i>Enviar Mensagem
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <img src="assets/logo.png" alt="BordArt Logo" height="40" class="footer-logo">
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2026 BordArt. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="https://instagram.com/bordartaracaju/" target="_blank" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5579988196571" target="_blank" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/p/BordArt-100068147492402/" target="_blank" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
