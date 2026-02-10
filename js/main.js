@@ -187,4 +187,31 @@ document.addEventListener('DOMContentLoaded', function() {
             touch: true
         });
     }
+
+    // ===== Lazy-load Instagram Embeds =====
+    function loadInstagramEmbeds(slide) {
+        const lazyEmbeds = slide.querySelectorAll('.instagram-lazy');
+        lazyEmbeds.forEach(placeholder => {
+            const permalink = placeholder.dataset.permalink;
+            const blockquote = document.createElement('blockquote');
+            blockquote.className = 'instagram-media';
+            blockquote.dataset.instgrmPermalink = permalink;
+            blockquote.dataset.instgrmVersion = '14';
+            blockquote.setAttribute('style', 'background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:calc(100% - 2px);');
+            blockquote.innerHTML = '<div style="padding:16px;"><a href="' + permalink + '" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"><div style="display:flex; flex-direction:row; align-items:center;"><div style="background-color:#F4F4F4; border-radius:50%; flex-grow:0; height:40px; margin-right:14px; width:40px;"></div><div style="display:flex; flex-direction:column; flex-grow:1; justify-content:center;"><div style="background-color:#F4F4F4; border-radius:4px; flex-grow:0; height:14px; margin-bottom:6px; width:100px;"></div><div style="background-color:#F4F4F4; border-radius:4px; flex-grow:0; height:14px; width:60px;"></div></div></div><div style="padding:19% 0;"></div><div style="display:block; height:50px; margin:0 auto 12px; width:50px;"></div><div style="padding-top:8px;"><div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver no Instagram</div></div></a></div>';
+            placeholder.replaceWith(blockquote);
+        });
+        if (lazyEmbeds.length > 0 && window.instgrm) {
+            window.instgrm.Embeds.process();
+        }
+    }
+
+    // Load embeds when carousel slides change
+    [portfolioCarousel, portfolioCarouselMobile].forEach(carousel => {
+        if (carousel) {
+            carousel.addEventListener('slid.bs.carousel', function(e) {
+                loadInstagramEmbeds(e.relatedTarget);
+            });
+        }
+    });
 });
