@@ -193,13 +193,14 @@ img {
     position: relative;
     z-index: 2;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 .hero-logo {
     max-width: 450px;
     width: 80%;
     height: auto;
-    margin-top: 4rem;
+    margin-top: 5rem;
     filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.15));
 }
 
@@ -304,7 +305,7 @@ img {
 
 /* ===== Services Section ===== */
 .services-section {
-    padding: 7rem 0;
+    padding: 4.5rem 0;
     background: var(--white);
 }
 
@@ -377,7 +378,7 @@ img {
 
 /* ===== Portfolio Section ===== */
 .portfolio-section {
-    padding: 7rem 0;
+    padding: 4.5rem 0 3rem;
     background: var(--gray-50);
 }
 
@@ -454,7 +455,7 @@ img {
 
 /* ===== About / Values Section ===== */
 .about-section {
-    padding: 7rem 0;
+    padding: 4.5rem 0;
     background: var(--white);
 }
 
@@ -530,7 +531,7 @@ img {
 
 /* ===== Contact Section ===== */
 .contact-section {
-    padding: 7rem 0;
+    padding: 4.5rem 0 4.5rem;
     background: var(--primary);
     position: relative;
 }
@@ -740,6 +741,15 @@ img {
 
     .contact-form-card {
         padding: 1.75rem;
+    }
+
+    .carousel-inner {
+        min-height: auto;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 12%;
     }
 }
 

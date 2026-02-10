@@ -169,11 +169,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }, stepTime);
     }
 
-    // ===== Initialize Bootstrap Carousel =====
+    // ===== Initialize Bootstrap Carousels =====
     const portfolioCarousel = document.getElementById('portfolioCarousel');
     if (portfolioCarousel) {
         new bootstrap.Carousel(portfolioCarousel, {
             interval: 5000,
+            wrap: true,
+            touch: true
+        });
+    }
+
+    const portfolioCarouselMobile = document.getElementById('portfolioCarouselMobile');
+    if (portfolioCarouselMobile) {
+        new bootstrap.Carousel(portfolioCarouselMobile, {
+            interval: 4000,
             wrap: true,
             touch: true
         });
