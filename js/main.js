@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', handleNavbarScroll);
-    handleNavbarScroll(); // Check on page load
+    handleNavbarScroll();
 
     // ===== Smooth Scroll for Navigation Links =====
     const navLinks = document.querySelectorAll('a[href^="#"]');
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', highlightNavLink);
-    highlightNavLink(); // Check on page load
+    highlightNavLink();
 
     // ===== Contact Form Handling =====
     const contactForm = document.getElementById('contactForm');
@@ -79,73 +79,54 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Get form data
             const formData = new FormData(contactForm);
             const name = formData.get('name');
             const email = formData.get('email');
             const phone = formData.get('phone');
             const message = formData.get('message');
 
-            // Create WhatsApp message
             const whatsappMessage = `Ola! Meu nome e ${name}.%0A%0A${message}%0A%0AE-mail: ${email}${phone ? '%0ATelefone: ' + phone : ''}`;
-
-            // Open WhatsApp with the message
             const whatsappUrl = `https://wa.me/5579988196571?text=${whatsappMessage}`;
             window.open(whatsappUrl, '_blank');
 
-            // Show success feedback
             showFormFeedback('Redirecionando para o WhatsApp...', 'success');
-
-            // Reset form
             contactForm.reset();
         });
     }
 
-    // ===== Form Feedback Function =====
     function showFormFeedback(message, type) {
-        // Remove existing feedback
         const existingFeedback = document.querySelector('.form-feedback');
         if (existingFeedback) {
             existingFeedback.remove();
         }
 
-        // Create feedback element
         const feedback = document.createElement('div');
         feedback.className = `form-feedback alert alert-${type === 'success' ? 'success' : 'danger'} mt-3`;
         feedback.textContent = message;
 
-        // Insert after submit button
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         submitBtn.parentNode.appendChild(feedback);
 
-        // Remove after 5 seconds
         setTimeout(() => {
             feedback.remove();
         }, 5000);
     }
 
-    // ===== Intersection Observer for Animations =====
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    // ===== Intersection Observer for Scroll Animations =====
+    const animObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
+                animObserver.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+    });
 
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.service-card, .value-card, .stat-item');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        animObserver.observe(el);
     });
 
     // ===== Stats Counter Animation =====
