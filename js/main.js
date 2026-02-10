@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const phone = formData.get('phone');
             const message = formData.get('message');
 
-            const whatsappMessage = `Ola! Meu nome e ${name}.%0A%0A${message}%0A%0AE-mail: ${email}${phone ? '%0ATelefone: ' + phone : ''}`;
+            const whatsappMessage = `Olá! Meu nome é ${name}.%0A%0A${message}%0A%0AE-mail: ${email}${phone ? '%0ATelefone: ' + phone : ''}`;
             const whatsappUrl = `https://wa.me/5579988196571?text=${whatsappMessage}`;
             window.open(whatsappUrl, '_blank');
 
